@@ -23,6 +23,9 @@
       <%= f.text_field :address, :class => 'text_field' %>
     </div>
   </div>
+  
+  <%=render "complaint_form", f: f%>
+
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

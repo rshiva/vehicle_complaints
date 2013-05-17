@@ -2,7 +2,7 @@ VehicleComplaints::Application.routes.draw do
   resources :complaints
 
 
-  resources :users ,only: [:new,:show,:create]
+  resources :users 
 
 
   root to: "users#new"

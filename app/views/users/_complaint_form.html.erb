@@ -1,0 +1,74 @@
+<%= f.fields_for :complaints, :html => { :class => 'form-horizontal' } do |builder| %>
+  <div class="control-group">
+    <%= builder.label :fly_destination, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.check_box :fly_destination, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :from_to_fly, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.text_field :from_to_fly, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :excess_charged, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.check_box :excess_charged, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :indecent_behaviour, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.check_box :indecent_behaviour, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :charged_and_allowed_other_complainant, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.check_box :charged_and_allowed_other_complainant, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :charged_for_luggage, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.number_field :charged_for_luggage, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :from_to_luggage, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.text_field :from_to_luggage, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :bus_stop_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.text_field :bus_stop_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :other_complaints, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.text_field :other_complaints, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :occurence_date_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.datetime_select :occurence_date_time, :class => 'datetime_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :place_occurence, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.text_field :place_occurence, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= builder.label :fault_no_working_meter, :class => 'control-label' %>
+    <div class="controls">
+      <%= builder.check_box :fault_no_working_meter, :class => 'check_box' %>
+    </div>
+  </div>
+<% end %>
