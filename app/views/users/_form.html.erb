@@ -8,7 +8,7 @@
   <div class="control-group">
     <%= f.label :email, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :email, :class => 'text_field' %>
+      <%= f.email_field :email, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -24,7 +24,7 @@
     </div>
   </div>
   
-  <%=render "complaint_form", f: f%>
+  <%=render "complaint_form", f: f %>
 
 
   <div class="form-actions">

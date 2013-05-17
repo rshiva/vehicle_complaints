@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-    #@complaints=@user.complaints.build
+    @user.complaints.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,10 +45,10 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: 'Complaint was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to root_path }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end

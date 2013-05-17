@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+$(function() {
+
+	$("#complaint_vehicles_vehicle_types").change(function () {
+	$("#complaint_vehicles_vehicle_types option:selected").each(function () {
+	var selected_vehicle=$(this).text();
+	if(selected_vehicle == "Bus"){
+	    $("#bus_stop").show();
+	}else
+	{
+		$("#bus_stop").hide();
+	}
+	})
+
+	})
+
+	$("#refused_checkbox").click(function(){
+		$("#refused_from_to").slideToggle();
+
+	})
+
+	
+
+
+});
