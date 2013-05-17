@@ -1,4 +1,20 @@
 <%= f.fields_for :complaints, :html => { :class => 'form-horizontal' } do |builder| %>
+
+  <%= f.fields_for :vehicle do |vehicle_builder| %>
+    
+  <div class="control-group">
+    <%= vehicle_builder.label :vehicle_types , "Mode of Transportation" %>
+    <div class="controls">
+      <%= vehicle_builder.select :vehicle_types , [["- Select a Mode-", nil]] + Vehicle.vehicle_types.collect {|p| p}, :id => "vehicle_types" %>
+    </div>
+  </div>
+  <div class="control-group">
+     <%= vehicle_builder.label :number , "Vehicle Number"  %>
+    <div class="controls">
+      <%= vehicle_builder.text_field :number  %>
+    </div>
+ </div>
+      <% end %>
   <div class="control-group">
     <%= builder.label :place_occurence, "Place Where The Incident Happened",:class => 'control-label' %>
     <div class="controls">
