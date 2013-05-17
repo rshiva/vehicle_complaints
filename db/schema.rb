@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517074713) do
+ActiveRecord::Schema.define(:version => 20130517082428) do
+
+  create_table "complaints", :force => true do |t|
+    t.boolean  "fly_destination"
+    t.string   "from_to_fly"
+    t.boolean  "excess_charged"
+    t.boolean  "indecent_behaviour"
+    t.boolean  "charged_and_allowed_other_complainant"
+    t.integer  "charged_for_luggage"
+    t.string   "from_to_luggage"
+    t.string   "bus_stop_name"
+    t.string   "other_complaints"
+    t.datetime "occurence_date_time"
+    t.string   "place_occurence"
+    t.boolean  "fault_no_working_meter"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

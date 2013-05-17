@@ -1,0 +1,80 @@
+<%= form_for @complaint, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :fly_destination, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :fly_destination, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :from_to_fly, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :from_to_fly, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :excess_charged, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :excess_charged, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :indecent_behaviour, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :indecent_behaviour, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :charged_and_allowed_other_complainant, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :charged_and_allowed_other_complainant, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :charged_for_luggage, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :charged_for_luggage, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :from_to_luggage, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :from_to_luggage, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :bus_stop_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bus_stop_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :other_complaints, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :other_complaints, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :occurence_date_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.datetime_select :occurence_date_time, :class => 'datetime_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :place_occurence, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :place_occurence, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :fault_no_working_meter, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :fault_no_working_meter, :class => 'check_box' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                complaints_path, :class => 'btn' %>
+  </div>
+<% end %>
