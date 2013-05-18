@@ -18,8 +18,8 @@
 
 $(function() {
 
-	$("#complaint_vehicles_vehicle_types").change(function () {
-	$("#complaint_vehicles_vehicle_types option:selected").each(function () {
+	$("#user_vehicle_vehicle_types").change(function () {
+	$("#user_vehicle_vehicle_types option:selected").each(function () {
 	var selected_vehicle=$(this).text();
 	if(selected_vehicle == "Bus"){
 	    $("#bus_stop").show();
