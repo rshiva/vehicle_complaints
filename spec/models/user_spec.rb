@@ -3,7 +3,7 @@ require "spec_helper"
 describe User do
 
 	it "should create user with valid attributes" do
-		User.create!(:name => "test",:email => "test@gmail.com",mobile: "1234567890", address: "Mumbai")
+    FactoryGirl.create(:user,:mobile => "1234567890").should be_valid
 	  
 	end
   
