@@ -3,6 +3,8 @@ class Vehicle < ActiveRecord::Base
 
   belongs_to :complaint
 
+  validates_presence_of :vehicle_types , :vehicle_number
+
 
   def self.vehicle_types
   	@types=  ["Auto","Taxi","Bus"]

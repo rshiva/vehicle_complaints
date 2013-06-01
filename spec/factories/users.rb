@@ -7,4 +7,11 @@ FactoryGirl.define do
   	f.address { Faker::Address.street_name}
   end
 	
+FactoryGirl.define do
+	factory :vehicle do |f|
+		f.vehicle_types "Auto"
+		f.vehicle_number "MH012TR1234"
+	end
+end
+
 end
